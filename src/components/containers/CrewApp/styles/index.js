@@ -18,7 +18,10 @@ export const Nav = styled.nav`
 `
 
 export const Header = styled.header`
-  margin: 0 0 0 135px;
+  position: fixed;
+  left: 135px;
+  top: 0;
+  right: 0;
   padding: 25px 0 15px;
 
   h1 {
@@ -31,8 +34,8 @@ export const Header = styled.header`
 export const Container = styled.div`
   display: flex;
   padding: 10px 10px 0 15px;
-  height: calc(100vh - 105px);
-  margin: 15px 15px 0 110px;
+  height: calc(100vh - 145px);
+  margin: 125px 15px 0 110px;
 
   &:after {
     content: "";

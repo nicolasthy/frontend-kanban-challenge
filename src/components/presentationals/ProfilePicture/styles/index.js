@@ -3,9 +3,12 @@ import { darken } from "polished"
 
 import { hex2rgba } from "utils/colors"
 
-export const Container = styled.div`
-  background: ${({ hex }) => hex2rgba(hex, 0.5)};
-  color: ${({ hex }) => darken(0.2, hex)};
+export const Container = styled.div.attrs(({ hex }) => ({
+  style: {
+    background: hex2rgba(hex, 0.5),
+    color: darken(0.2, hex),
+  },
+}))`
   display: flex;
   justify-content: center;
   align-items: center;
