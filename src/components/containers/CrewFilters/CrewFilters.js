@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react"
 import { FiltersContext } from "contexts/FiltersProvider"
 
 const CrewFilters = ({ availableFilters }) => {
-  const [open, setOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [filters, setFilters] = useContext(FiltersContext)
 
   const handleFilter = (filter) => {
@@ -17,7 +17,7 @@ const CrewFilters = ({ availableFilters }) => {
 
   return (
     <div>
-      <span onClick={() => setOpen(!open)}>Quick filters</span>
+      <span onClick={() => setIsOpen(!isOpen)}>Quick filters</span>
 
       <ul>
         {filters.map((filter, index) => {
@@ -29,11 +29,12 @@ const CrewFilters = ({ availableFilters }) => {
         })}
       </ul>
 
-      {open && (
+      {isOpen && (
         <ul>
           {availableFilters.map((filter, index) => {
             return (
               <li key={index} onClick={() => handleFilter(filter)}>
+                <input type="checkbox" readOnly checked={filters.includes(filter)} />
                 {filter}
               </li>
             )
