@@ -29,7 +29,7 @@ const CrewApp = () => {
     dispatch(fetchTalents())
   }, [dispatch])
 
-  const onDragEnd = ({ destination, source, draggableId }) => {
+  const onDragEnd = ({ destination, source }) => {
     if (!destination) {
       return
     }
