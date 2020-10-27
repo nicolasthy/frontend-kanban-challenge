@@ -18,8 +18,8 @@ import {
 const CrewFilters = ({ availableFilters }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [filters, setFilters] = useContext(FiltersContext)
+  
   const ref = useRef()
-
   useOnClickOutside(ref, () => setIsOpen(false))
 
   const handleFilter = (filter) => {

@@ -17,7 +17,7 @@ export const Card = styled.li.attrs(({ isDragging, style }) => ({
   cursor: grab;
 
   &:hover {
-    box-shadow: 0 8px 6px -5px rgba(5, 7, 26, 0.1);
+    box-shadow: 0 16px 12px -10px rgba(5, 7, 26, 0.1);
   }
 `
 

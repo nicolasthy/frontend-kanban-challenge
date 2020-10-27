@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { darken, lighten } from "polished"
 
 export const Container = styled.div`
   flex: 0 0 auto;
@@ -21,8 +22,8 @@ export const Header = styled.h2`
   text-transform: uppercase;
 
   small {
-      font-weight: 400;
-      padding-left: 5px;
+    font-weight: 400;
+    padding-left: 5px;
   }
 
   > span {
@@ -46,4 +47,33 @@ export const DroppableContainer = styled.div`
   max-height: calc(100% - 65px);
   overflow-y: auto;
   overflow-anchor: none;
+`
+
+export const LoadMore = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: none;
+  background: #bec1ea;
+  color: #6167c1;
+  cursor: pointer;
+  transition: background 0.2s linear, color 0.2s linear;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: ${darken(0.05, "#bec1ea")};
+    color: ${darken(0.05, "#6167c1")};
+  }
+
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    margin-right: 10px;
+  }
 `
