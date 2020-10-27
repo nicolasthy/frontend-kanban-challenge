@@ -29,12 +29,20 @@ export const UserName = styled.h3`
   margin: 0;
   font-size: 18px;
   font-weight: 500px;
+
+  @media only screen and (max-device-width: 765px) {
+    font-size: 16px;
+  }
 `
 
 export const UserTitle = styled.span`
   display: block;
   font-size: 14px;
   color: #41528b;
+
+  @media only screen and (max-device-width: 765px) {
+    font-size: 12px;
+  }
 `
 
 export const TagsList = styled.ul`

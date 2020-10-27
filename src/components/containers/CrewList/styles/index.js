@@ -8,6 +8,10 @@ export const Container = styled.div`
   border-radius: 10px;
   margin: 0 10px;
   padding: 20px 20px 10px 20px;
+
+  @media only screen and (max-device-width: 765px) {
+    width: 300px;
+  }
 `
 
 export const Header = styled.h2`
@@ -46,6 +50,7 @@ export const List = styled.ul`
 export const DroppableContainer = styled.div`
   max-height: calc(100% - 65px);
   overflow-y: auto;
+  overflow-x: hidden;
   overflow-anchor: none;
 `
 

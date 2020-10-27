@@ -9,7 +9,7 @@ import FiltersProvider from "contexts/FiltersProvider"
 
 import { fetchTalents, sortTalents } from "actions/index"
 
-import { Nav, Header, Container } from "./styles"
+import { Nav, Header, HeaderLogo, Container } from "./styles"
 
 const CrewApp = () => {
   const dispatch = useDispatch()
@@ -38,8 +38,13 @@ const CrewApp = () => {
       </Nav>
 
       <Header>
-        <h1>Board</h1>
-        <CrewFilters availableFilters={availableFilters} />
+        <HeaderLogo>
+          <img src="/crewlogo.png" alt="Crew" />
+        </HeaderLogo>
+        <div>
+          <h1>Board</h1>
+          <CrewFilters availableFilters={availableFilters} />
+        </div>
       </Header>
 
       {talents && (
