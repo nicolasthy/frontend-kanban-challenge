@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { darken, lighten } from "polished"
+import { darken } from "polished"
 
 export const Container = styled.div`
   flex: 0 0 auto;
