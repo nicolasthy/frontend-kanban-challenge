@@ -20,6 +20,12 @@ const CrewApp = () => {
     .filter((tag, index, self) => index === self.findIndex((t) => t === tag))
 
   useEffect(() => {
+    //   Set VH CSS variable to handle mobile issues with VH
+    const vh = window.innerHeight * 0.01 + "px"
+    document.documentElement.style.setProperty("--vh", vh)
+  }, [])
+
+  useEffect(() => {
     dispatch(fetchTalents())
   }, [dispatch])
 

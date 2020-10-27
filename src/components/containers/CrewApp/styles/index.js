@@ -74,5 +74,6 @@ export const Container = styled.div`
   @media only screen and (max-device-width: 765px) {
     margin: 125px 5px 0 5px;
     height: calc(100vh - 215px);
+    height: calc((var(--vh, 1vh) * 100) - 130px);
   }
 `
